@@ -1,0 +1,22 @@
+cat > .gitignore <<'EOF'
+.env
+.env.*
+!.env.example
+
+*.log
+*.pid
+*.sock
+
+vendor/
+node_modules/
+
+.DS_Store
+Thumbs.db
+
+*.tar
+*.tar.gz
+*.tgz
+*.dump
+*.dmp
+
+EOF
