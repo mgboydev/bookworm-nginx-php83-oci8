@@ -140,7 +140,7 @@ COPY docker/php/opcache.ini /etc/php/8.3/fpm/conf.d/99-base-opcache.ini
 COPY docker/php/www.conf /etc/php/8.3/fpm/pool.d/www.conf
 
 # ------------------------------------------------------------
-# 4. Install Composer dengan retry
+# 4. Install Composer with retry
 # ------------------------------------------------------------
 RUN set -eux; \
     curl --retry 5 \
