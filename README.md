@@ -114,4 +114,4 @@ CMD ["/usr/local/bin/start.sh"]
 
 ## 📝 License
 
-Distributed under the MIT License. Feel free to use and modify for commercial or private projects.
+This project is licensed under the MIT License - see the LICENSE file for details.
