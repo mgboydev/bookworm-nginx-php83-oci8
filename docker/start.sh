@@ -34,6 +34,26 @@ if [[ "${NGINX_AUTO_WORKERS:-false}" == "true" ]]; then
     fi
 fi
 
+# Laravel initialization
+if [[ -f "${APP_START_SCRIPT}" ]]; then
+
+    echo "========== Running Laravel Initialization =========="
+
+    if [[ ! -x "${APP_START_SCRIPT}" ]]; then
+        chmod +x "${APP_START_SCRIPT}"
+    fi
+
+    bash "${APP_START_SCRIPT}"
+
+    echo "========== Laravel Initialization Finished =========="
+
+else
+
+    echo "Laravel initialization script not found."
+    echo "Skipping Laravel initialization."
+
+fi
+
 # Validate configuration before starting services
 echo "Validating Nginx configuration..."
 nginx -t
