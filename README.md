@@ -86,7 +86,7 @@ You can customize runtime settings using environment variables:
 Use this image as a base for building your custom Laravel project:
 
 ```dockerfile
-FROM mgboydev/bookworm-nginx-php-oci8:8.3-1.0.0
+FROM mgboydev/bookworm-nginx-php-oci8:latest
 
 # Copy application source code
 COPY . /var/www/html
